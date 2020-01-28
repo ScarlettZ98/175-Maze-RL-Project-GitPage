@@ -1,9 +1,10 @@
 # CS 175 Project Proposal
 Shawn Kooklan 77621849
+
 Amitesh Arora 53422821
+
 Scarlett Zhang 66108402
 
-[TOC]
 
 ## Project Summary
 
@@ -46,18 +47,21 @@ _Figure 2. Sanity Check Case Example & Moonshot Case Example_
 
 ## Goals
 
-### Minimum goal: Build an agent that is able to successfully solve a maze that has a relatively easy difficulty with no obstacles.
+### Minimum goal
+Build an agent that is able to successfully solve a maze that has a relatively easy difficulty with no obstacles.
 
 *   Milestone 1: Design a working maze and build the framework for testing an agent within a maze.
 
 *   Milestone 2: Perform learning in order to have the agent successfully solve the maze and reach the diamonds.
 
-### Realistic goal: Add difficulty to the maze by making the layout more complex and adding obstacles, such that the agent can destroy or avoid obstacles in order to solve the maze.
+### Realistic goal
+Add difficulty to the maze by making the layout more complex and adding obstacles, such that the agent can destroy or avoid obstacles in order to solve the maze.
 
 *   Milestone 1: Design working mazes that are of higher complexity with additional obstacles but that are still reasonable and possible to solve.
 
 *   Milestone 2: Train the agent to succeed in solving the maze even with the additional complexity.
 
-### Ambitious goal: Find the lowest cost path through a difficult maze with many obstacles and multiple goals.
+### Ambitious goal
+Find the lowest cost path through a difficult maze with many obstacles and multiple goals.
 
 *   Milestone: Find the lowest cost path and goal in the maze.
