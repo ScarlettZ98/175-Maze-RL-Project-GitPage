@@ -8,24 +8,23 @@ Scarlett Zhang 66108402
 
 ## Project Summary
 
-Inspired by the video _[Tabular Q learning using Malmo in Minecraft](https://www.youtube.com/watch?v=Iloh8MV-WvY&t=101s)_, we want to develop a smart agent which can walk around a maze and reach the goal with the smallest cost. 
+Inspired by the video _[Tabular Q learning using Malmo in Minecraft](https://www.youtube.com/watch?v=Iloh8MV-WvY&t=101s)_, we want to develop a smart agent which can walk around a complex maze and reach the goal with the smallest cost. 
 
 Our agent should be able to:
 
 
 
 *   Take the current view of the game and return an action among moving left, moving right, moving forward, moving backward, or attacking.
-*   Keep a memory of explored positions and their values 
-*   Update values of an explored position
+*   Find an optimal path through the maze in a given amount of time.
 
-The maze is a 20x20 square plain surrounded by lava. The goals are represented as diamonds. The goal can show up anywhere on the map. The agent must reach one of the diamonds in order to succeed. There are also trees as obstacles, which require the agent to either avoid them or destroy them. Up to 40% of the maze can be trees. 
+The maze is a 20x20 square plain surrounded by lava. The goal is represented as a diamond block. The start and goal states are placed on opposite edges to one another. The agent must reach the diamond in order to succeed. There are also trees as obstacles, which require the agent to either avoid them or destroy them. Up to 40% of the maze can be trees. 
 
 ![pixil-frame-0 (1).png](https://i.loli.net/2020/01/28/ITBt6QsxLJgvN9V.png)
 
 
 _Figure 1. Example of Maze. Red: Lava, Brown: Tree, Blue: Goals, Grey: Agent_
 
-When the agent reaches one of the diamonds or steps into the lava, the game restarts. 
+When the agent reaches the diamond block or steps into the lava, the game restarts. 
 
 ## Evaluation Plan
 
@@ -48,20 +47,20 @@ _Figure 2. Sanity Check Case Example & Moonshot Case Example_
 ## Goals
 
 ### Minimum goal
-Build an agent that is able to successfully solve a maze that has a relatively easy difficulty with no obstacles.
+Build an agent that is able to successfully solve a fixed, simple maze.
 
 *   Milestone 1: Design a working maze and build the framework for testing an agent within a maze.
 
-*   Milestone 2: Perform learning in order to have the agent successfully solve the maze and reach the diamonds.
+*   Milestone 2: Perform learning in order to have the agent successfully solve the maze and reach the diamond.
 
 ### Realistic goal
-Add difficulty to the maze by making the layout more complex and adding obstacles, such that the agent can destroy or avoid obstacles in order to solve the maze.
+Add difficulty to the maze by increasing the number of obstacles and making it randomly generated.
 
-*   Milestone 1: Design working mazes that are of higher complexity with additional obstacles but that are still reasonable and possible to solve.
+*   Milestone 1: Adjust parameters and optimize training to account for random generation of more complex mazes.
 
-*   Milestone 2: Train the agent to succeed in solving the maze even with the additional complexity.
+*   Milestone 2: Perform training and evaluate the agent's performance when solving a higher complexity maze.
 
 ### Ambitious goal
-Find the lowest cost path through a difficult maze with many obstacles and multiple goals.
+Add high complexity to the problem by adding destroyable blocks such as trees to the maze which the agent must decide to avoid or destroy. The agent can also craft items with materials to aid in its solution.
 
-*   Milestone: Find the lowest cost path and goal in the maze.
+*   Milestone: Adjust policy and train agent to account for the option of destroying blocks and crafting items.
